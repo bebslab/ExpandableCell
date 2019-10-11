@@ -16,7 +16,7 @@ open class ExpandableTableView: UITableView {
     fileprivate var expandableProcessor = ExpandableProcessor()
     fileprivate var formerIndexPath: IndexPath?
 
-    public var expandableDelegate: ExpandableDelegate? {
+    public weak var expandableDelegate: ExpandableDelegate? {
         didSet {
             self.dataSource = self
             self.delegate = self
